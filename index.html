@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denise Delisser | AI Product Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2d3436;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        header .tagline {
+            font-size: 1.3em;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #667eea;
+            font-weight: 700;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.15em;
+            line-height: 1.9;
+            color: #555;
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+        }
+        
+        .credentials {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+        
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .credential-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .credential-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+        
+        .credential-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .credential-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .credential-card p {
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .project-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 35px;
+            transition: all 0.3s ease;
+            border-left: 5px solid #667eea;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .project-card h3 {
+            color: #2d3436;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+        
+        .project-card p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .project-skills {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+        
+        .project-skills strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .project-skills span {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .skills-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .skill-item {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            background: rgba(255,255,255,0.25);
+            transform: scale(1.05);
+        }
+        
+        .contact-section {
+            background: #f8f9fa;
+            text-align: center;
+        }
+        
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-content p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-btn {
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-btn.email {
+            background: #667eea;
+            color: white;
+        }
+        
+        .contact-btn.linkedin {
+            background: #0077b5;
+            color: white;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        footer {
+            background: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        footer p {
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            header .tagline {
+                font-size: 1.1em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .projects-grid,
+            .credentials-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Denise DeLisser</h1>
+            <p class="tagline">AI Product Manager | Master's Candidate (CU Boulder) | 25 Years Translating Customer Needs into Solutions | IBM AI PM Certified</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </header>
+    
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>After 25 years leading technical support and customer success teams in SaaS and technology, I discovered that the biggest gap in tech isn't better algorithms—it's understanding what customers actually need.</p>
+                
+                <p>I've spent my career translating complex technical solutions into language customers understand, managing teams that turn frustrated users into advocates, and identifying product gaps before they become problems. When I saw how AI could transform this work, I knew I had to be part of building these products, not just supporting them.</p>
+                
+                <p>I'm now pursuing a Master's in Engineering Management from the University of Colorado Boulder while earning AI Product Management certifications from IBM. I'm building practical AI solutions—from AI-powered portfolio tools to command systems for LLM workflows—and learning to bridge the gap between what AI can do and what users actually need.</p>
+                
+                <p>I bring 25 years of customer empathy, technical fluency from managing SaaS products, and the strategic thinking that comes from translating between business needs and technical capabilities. I'm looking to join a team where user experience drives AI product decisions, not just technical possibility.</p>
+                
+                <p><strong>Currently based in Greenacres, Florida. Open to remote opportunities and international relocation.</strong></p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="credentials">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="credentials-grid">
+                <div class="credential-card">
+                    <div class="credential-icon">🎓</div>
+                    <h3>Master's in Engineering Management</h3>
+                    <p>University of Colorado Boulder</p>
+                    <p style="color: #667eea; font-weight: 600;">Expected: April 2027</p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">📜</div>
+                    <h3>IBM AI Product Manager</h3>
+                    <p>Professional Certificate</p>
+                    <p style="color: #667eea; font-weight: 600;">Starting: February 2026</p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">✅</div>
+                    <h3>Prompt Engineering for ChatGPT</h3>
+                    <p>Vanderbilt University</p>
+                    <p style="color: #00b894; font-weight: 600;">Completed: 2025</p>
+                </div>
+                
+                <div class="credential-card">
+                    <div class="credential-icon">✅</div>
+                    <h3>Google Generative AI Leader</h3>
+                    <p>Google Cloud</p>
+                    <p style="color: #00b894; font-weight: 600;">Completed: 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Portfolio Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>AI Command Language System</h3>
+                    <p>Designed a lightweight, model-agnostic command language for interacting with modern AI assistants using clean shorthand <code>/commands</code>. Built to give users fast, predictable control over complex LLM tasks across different platforms.</p>
+                    <div class="project-skills">
+                        <strong>Skills Demonstrated:</strong>
+                        <span>Prompt engineering, system design, cross-platform compatibility, user experience optimization</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>AI-Powered Portfolio Development</h3>
+                    <p>Built this portfolio website using Claude AI and GitHub Pages in under 3 hours, demonstrating rapid prototyping with AI assistance. Implemented concurrent Notion backup for content management flexibility.</p>
+                    <div class="project-skills">
+                        <strong>Skills Demonstrated:</strong>
+                        <span>AI-assisted development, prompt engineering, deployment automation, content strategy</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Multilingual Customer Support Agent</h3>
+                    <p><em>In Development:</em> Building an AI agent that detects customer language and provides support in 5+ languages, integrating workflow automation via Make.com and Airtable for response tracking.</p>
+                    <div class="project-skills">
+                        <strong>Skills Demonstrated:</strong>
+                        <span>Agent architecture, no-code automation, multilingual AI systems, customer journey mapping</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Core Strengths</h2>
+            <div class="skills-grid">
+                <div class="skill-item">AI Product Strategy</div>
+                <div class="skill-item">Prompt Engineering</div>
+                <div class="skill-item">Customer Experience Design</div>
+                <div class="skill-item">Technical Support Leadership</div>
+                <div class="skill-item">SaaS Product Management</div>
+                <div class="skill-item">Stakeholder Communication</div>
+                <div class="skill-item">Agile/Scrum Methodologies</div>
+                <div class="skill-item">GenAI Tools</div>
+                <div class="skill-item">Cross-functional Leadership</div>
+                <div class="skill-item">Workflow Automation</div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <p>I'm actively pursuing AI Product Manager roles and open to conversations about opportunities, collaborations, or just connecting with fellow AI enthusiasts.</p>
+                <div class="contact-buttons">
+                    <a href="mailto:denisedelisser1@gmail.com" class="contact-btn email">
+                        📧 Email Me
+                    </a>
+                    <a href="https://linkedin.com/in/denisedelisser" target="_blank" class="contact-btn linkedin">
+                        💼 LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Denise DeLisser. Built with Claude AI and deployed on GitHub Pages.</p>
+        </div>
+    </footer>
+</body>
+</html>
